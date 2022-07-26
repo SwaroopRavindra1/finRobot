@@ -1,0 +1,23 @@
+<TestGoogleApplication>
+
+
+    <applicationURL>https://techedtrainings.com/</applicationURL>
+    <applicationURLdocker>https://www.docker.com/</applicationURLdocker>
+    <gmailLoginID>testuser001</gmailLoginID>
+    <gmailLoginPW>testPW001</gmailLoginPW>
+    <chromepath>C:/Softwares/Chrome driver/chromedriver_win32 (1)/chromedriver.exe</chromepath>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</TestGoogleApplication>

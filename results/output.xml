@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0.1 (Python 3.10.4 on win32)" generated="20220725 22:45:51.514" rpa="false" schemaversion="3">
+<suite id="s1" name="validateHTML" source="C:\Users\00004990\PycharmProjects\RobotFramework\testscripts\validateHTML.robot">
+<test id="s1-t1" name="TC_001" line="11">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${appurl}</arg>
+<arg>${browsername}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220725 22:45:52.031" level="INFO">Opening browser 'headlesschrome' to base url 'https://testautomationpractice.blogspot.com/'.</msg>
+<status status="PASS" starttime="20220725 22:45:52.031" endtime="20220725 22:46:03.117"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20220725 22:46:03.117" endtime="20220725 22:46:03.229"/>
+</kw>
+<kw name="Get Element Count" library="SeleniumLibrary">
+<var>${countrow}</var>
+<arg>//table[@name='BookTable']/tbody/tr</arg>
+<doc>Returns the number of elements matching ``locator``.</doc>
+<msg timestamp="20220725 22:46:03.260" level="INFO">${countrow} = 7</msg>
+<status status="PASS" starttime="20220725 22:46:03.229" endtime="20220725 22:46:03.260"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>Table row count is: ${countrow}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220725 22:46:03.260" endtime="20220725 22:46:03.260"/>
+</kw>
+<kw name="Get Element Count" library="SeleniumLibrary">
+<var>${countcol}</var>
+<arg>//table[@name='BookTable']/tbody/tr[1]/th</arg>
+<doc>Returns the number of elements matching ``locator``.</doc>
+<msg timestamp="20220725 22:46:03.298" level="INFO">${countcol} = 4</msg>
+<status status="PASS" starttime="20220725 22:46:03.260" endtime="20220725 22:46:03.298"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>Table col count is:${countcol}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220725 22:46:03.298" endtime="20220725 22:46:03.298"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${headername1}</var>
+<arg>//table[@name='BookTable']/tbody/tr[1]/th[1]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20220725 22:46:03.345" level="INFO">${headername1} = BookName</msg>
+<status status="PASS" starttime="20220725 22:46:03.298" endtime="20220725 22:46:03.345"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${headername2}</var>
+<arg>//table[@name='BookTable']/tbody/tr[1]/th[2]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20220725 22:46:03.392" level="INFO">${headername2} = Author</msg>
+<status status="PASS" starttime="20220725 22:46:03.345" endtime="20220725 22:46:03.392"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${headername3}</var>
+<arg>//table[@name='BookTable']/tbody/tr[1]/th[3]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20220725 22:46:03.430" level="INFO">${headername3} = Subject</msg>
+<status status="PASS" starttime="20220725 22:46:03.392" endtime="20220725 22:46:03.430"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${headername4}</var>
+<arg>//table[@name='BookTable']/tbody/tr[1]/th[4]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20220725 22:46:03.461" level="INFO">${headername4} = Price</msg>
+<status status="PASS" starttime="20220725 22:46:03.430" endtime="20220725 22:46:03.461"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>Columns heders name: ${headername1} ${headername2} ${headername3} ${headername4}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220725 22:46:03.461" endtime="20220725 22:46:03.461"/>
+</kw>
+<kw name="Get WebElements" library="SeleniumLibrary">
+<var>${countcol}</var>
+<arg>//table[@name='BookTable']/tbody/tr[1]/th</arg>
+<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
+<msg timestamp="20220725 22:46:03.477" level="INFO">${countcol} = [&lt;selenium.webdriver.remote.webelement.WebElement (session="4e67d38bc2bdc655939cb4063c8fdd32", element="298e556f-82a5-40bd-af65-4d0204deb8ca")&gt;, &lt;selenium.webdriver.remote.webelement.WebElement (sessi...</msg>
+<status status="PASS" starttime="20220725 22:46:03.461" endtime="20220725 22:46:03.477"/>
+</kw>
+<status status="PASS" starttime="20220725 22:45:52.031" endtime="20220725 22:46:03.477"/>
+</test>
+<test id="s1-t2" name="FOR" line="48">
+<kw name="IN @{countcol}">
+<var>${apple}</var>
+<msg timestamp="20220725 22:46:03.477" level="FAIL">No keyword with name 'IN @{countcol}' found.</msg>
+<status status="FAIL" starttime="20220725 22:46:03.477" endtime="20220725 22:46:03.477"/>
+</kw>
+<kw name="${headerName} Get Text ${apple}">
+<status status="NOT RUN" starttime="20220725 22:46:03.492" endtime="20220725 22:46:03.492"/>
+</kw>
+<kw name="Log To Console ${headerName}">
+<status status="NOT RUN" starttime="20220725 22:46:03.499" endtime="20220725 22:46:03.499"/>
+</kw>
+<status status="FAIL" starttime="20220725 22:46:03.477" endtime="20220725 22:46:03.499">No keyword with name 'IN @{countcol}' found.</status>
+</test>
+<test id="s1-t3" name="END" line="51">
+<status status="FAIL" starttime="20220725 22:46:03.499" endtime="20220725 22:46:03.499">Test contains no keywords.</status>
+</test>
+<test id="s1-t4" name="${countcol}" line="57">
+<kw name="Get WebElements" library="SeleniumLibrary">
+<arg>//a</arg>
+<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
+<status status="PASS" starttime="20220725 22:46:03.499" endtime="20220725 22:46:03.530"/>
+</kw>
+<status status="PASS" starttime="20220725 22:46:03.499" endtime="20220725 22:46:03.530"/>
+</test>
+<test id="s1-t5" name="FOR" line="59">
+<kw name="${apple} IN @{countcol}">
+<msg timestamp="20220725 22:46:03.530" level="FAIL">No keyword with name '${apple} IN @{countcol}' found.</msg>
+<status status="FAIL" starttime="20220725 22:46:03.530" endtime="20220725 22:46:03.530"/>
+</kw>
+<kw name="${headerName} Get Text ${apple}">
+<status status="NOT RUN" starttime="20220725 22:46:03.530" endtime="20220725 22:46:03.530"/>
+</kw>
+<kw name="Log To Console ${headerName}">
+<status status="NOT RUN" starttime="20220725 22:46:03.546" endtime="20220725 22:46:03.546"/>
+</kw>
+<status status="FAIL" starttime="20220725 22:46:03.530" endtime="20220725 22:46:03.546">No keyword with name '${apple} IN @{countcol}' found.</status>
+</test>
+<test id="s1-t6" name="END" line="63">
+<status status="FAIL" starttime="20220725 22:46:03.546" endtime="20220725 22:46:03.546">Test contains no keywords.</status>
+</test>
+<test id="s1-t7" name="${countcol}" line="67">
+<kw name="Get WebElements" library="SeleniumLibrary">
+<arg>//table[@name='BookTable']/tbody/tr/td[1]</arg>
+<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
+<status status="PASS" starttime="20220725 22:46:03.546" endtime="20220725 22:46:03.561"/>
+</kw>
+<status status="PASS" starttime="20220725 22:46:03.546" endtime="20220725 22:46:03.561"/>
+</test>
+<test id="s1-t8" name="FOR" line="69">
+<kw name="IN @{countcol}">
+<var>${apple}</var>
+<msg timestamp="20220725 22:46:03.577" level="FAIL">No keyword with name 'IN @{countcol}' found.</msg>
+<status status="FAIL" starttime="20220725 22:46:03.577" endtime="20220725 22:46:03.577"/>
+</kw>
+<kw name="${headerName} Get Text ${apple}">
+<status status="NOT RUN" starttime="20220725 22:46:03.577" endtime="20220725 22:46:03.577"/>
+</kw>
+<kw name="Log To Console ${headerName}">
+<status status="NOT RUN" starttime="20220725 22:46:03.592" endtime="20220725 22:46:03.592"/>
+</kw>
+<status status="FAIL" starttime="20220725 22:46:03.577" endtime="20220725 22:46:03.592">No keyword with name 'IN @{countcol}' found.</status>
+</test>
+<test id="s1-t9" name="END" line="72">
+<kw name="Table Column Should Contain" library="SeleniumLibrary">
+<arg>BookTable</arg>
+<arg>4</arg>
+<arg>3000</arg>
+<doc>Verifies table column contains text ``expected``.</doc>
+<status status="PASS" starttime="20220725 22:46:03.592" endtime="20220725 22:46:03.730"/>
+</kw>
+<kw name="Table Row Should Contain" library="SeleniumLibrary">
+<arg>BookTable</arg>
+<arg>5</arg>
+<arg>Master In Selenium</arg>
+<doc>Verifies that table row contains text ``expected``.</doc>
+<status status="PASS" starttime="20220725 22:46:03.730" endtime="20220725 22:46:03.793"/>
+</kw>
+<kw name="Table Header Should Contain" library="SeleniumLibrary">
+<arg>BookTable</arg>
+<arg>Author</arg>
+<doc>Verifies table header contains text ``expected``.</doc>
+<status status="PASS" starttime="20220725 22:46:03.793" endtime="20220725 22:46:03.846"/>
+</kw>
+<kw name="Table Cell Should Contain" library="SeleniumLibrary">
+<arg>BookTable</arg>
+<arg>7</arg>
+<arg>3</arg>
+<arg>Javascript</arg>
+<doc>Verifies table cell contains text ``expected``.</doc>
+<msg timestamp="20220725 22:46:03.915" level="INFO">Table cell contains 'Javascript'.</msg>
+<status status="PASS" starttime="20220725 22:46:03.846" endtime="20220725 22:46:03.915"/>
+</kw>
+<kw name="Close All Browsers" library="SeleniumLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20220725 22:46:03.915" endtime="20220725 22:46:06.080"/>
+</kw>
+<status status="PASS" starttime="20220725 22:46:03.592" endtime="20220725 22:46:06.080"/>
+</test>
+<status status="FAIL" starttime="20220725 22:45:51.514" endtime="20220725 22:46:06.080"/>
+</suite>
+<statistics>
+<total>
+<stat pass="4" fail="5" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="4" fail="5" skip="0" id="s1" name="validateHTML">validateHTML</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20220725 22:46:03.530" level="WARN">Multiple tests with name 'FOR' executed in suite 'validateHTML'.</msg>
+<msg timestamp="20220725 22:46:03.546" level="WARN">Multiple tests with name 'END' executed in suite 'validateHTML'.</msg>
+<msg timestamp="20220725 22:46:03.546" level="WARN">Multiple tests with name '${countcol}' executed in suite 'validateHTML'.</msg>
+<msg timestamp="20220725 22:46:03.561" level="WARN">Multiple tests with name 'FOR' executed in suite 'validateHTML'.</msg>
+<msg timestamp="20220725 22:46:03.592" level="WARN">Multiple tests with name 'END' executed in suite 'validateHTML'.</msg>
+</errors>
+</robot>

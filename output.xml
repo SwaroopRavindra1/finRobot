@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0.1 (Python 3.10.4 on win32)" generated="20220721 10:43:51.629" rpa="false" schemaversion="3">
+<suite id="s1" name="Googletest" source="C:\Users\00004990\PycharmProjects\RobotFramework\testscripts\googletest.robot">
+<test id="s1-t1" name="Test_Google_app_tc01" line="14">
+<kw name="open browser">
+<arg>https://www.google.com</arg>
+<arg>chrome</arg>
+<msg timestamp="20220721 10:43:51.700" level="FAIL">No keyword with name 'open browser' found.</msg>
+<status status="FAIL" starttime="20220721 10:43:51.699" endtime="20220721 10:43:51.701"/>
+</kw>
+<kw name="maximize browser window">
+<status status="NOT RUN" starttime="20220721 10:43:51.705" endtime="20220721 10:43:51.705"/>
+</kw>
+<kw name="close all browsers">
+<status status="NOT RUN" starttime="20220721 10:43:51.708" endtime="20220721 10:43:51.709"/>
+</kw>
+<status status="FAIL" starttime="20220721 10:43:51.693" endtime="20220721 10:43:51.710">No keyword with name 'open browser' found.</status>
+</test>
+<status status="FAIL" starttime="20220721 10:43:51.635" endtime="20220721 10:43:51.713"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="Googletest">Googletest</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20220721 10:43:51.690" level="ERROR">Error in file 'C:\Users\00004990\PycharmProjects\RobotFramework\testscripts\googletest.robot' on line 3: Importing library 'SeleniumLibarary' failed: ModuleNotFoundError: No module named 'SeleniumLibarary'
+Traceback (most recent call last):
+  None
+PYTHONPATH:
+  C:\Users\00004990\PycharmProjects\RobotFramework\venv\Scripts\robot.exe
+  C:\Program Files\Python310\python310.zip
+  C:\Program Files\Python310\DLLs
+  C:\Program Files\Python310\lib
+  C:\Program Files\Python310
+  C:\Users\00004990\PycharmProjects\RobotFramework\venv
+  C:\Users\00004990\PycharmProjects\RobotFramework\venv\lib\site-packages</msg>
+</errors>
+</robot>
